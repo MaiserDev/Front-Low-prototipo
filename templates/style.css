@@ -6,34 +6,130 @@
     --cor1: #1e3a8a;
     --cor2: #f5e8c7;
     --cor3: #fff;
+    --cor4: #0e7490;
+    --cor5: #a78bfa;
+    --cor6: #000;
     --fonte1: Arial, Helvetica, sans-serif; 
     --fonte2: "Bebas Neue", sans-serif;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    min-height: 100vh;
     font-family: var(--fonte1);
-    background-color: var(--cor2);
+    background-color: var(--cor);
+    
 }
 
 header {
     background-color: #1e3a8a;
     color: var(--cor2);
+
     text-align: center;
-    
+    padding: 20px;
 }
 
-header h1 {
+header > h1 {
     font-family: var(--fonte2);
+    font-size: clamp(2em, 5vw, 4em);
+}
+
+header p {
+    font-size: clamp(0.5em, 1.5vw, 1em);
+    font-weight: bold;
+}
+
+nav.navegacao {
+    background-color: var(--cor1);
+    padding: 10px 20px;
+}
+
+nav.navegacao ul {
+    list-style: none;
+
+    display: flex;
+    gap: 15px;
+}
+
+nav.navegacao a {
+    color: var(--cor3);
+
+    text-decoration: none;
+    font-size: clamp(9px, 4vw, 16px);
+
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav.navegacao a:hover {
+    background-color: var(--cor4);
+    color: var(--cor3);
+    transition-duration: 0.3s;
 }
 
 main {
-    background-color: var(--cor3);
+    max-width: 1400px;
+
+    margin: 0px auto;
+    padding: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
+
+section.secao {
+    background-color: var(--cor3);
+    color: var(--cor6);
+    flex: 1 1 300px;
+    max-width: 500px;
+    min-height: auto;
+
+    margin-top: 10px;
+
+    border: 2px solid var(--cor4);
+    border-radius: 10px;
+}
+
+section.secao h2 {
+    background-color: #0e7490;
+    color: var(--cor3);
+    font-size: 1.2em;
+    text-align: center;
+    
+    padding: 12px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+section.secao p {
+    padding: 15px;
+    
+}
+
+section#s1 img {
+    max-width: 300px;
+}
+
+section#s2 img {
+    max-width: 300px;
+}
+
+section#s3 img {
+    width: 100%;
+}
+
+section img {
+    margin: auto;
+}
+
+
+
+
 
